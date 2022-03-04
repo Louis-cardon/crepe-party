@@ -1,0 +1,107 @@
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Name Ingredient"
+    "NbPersonne Ingredient";
+    height: 97vh;
+}
+
+.Name {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    " . ."
+    " Label Label "
+    " . .";
+    grid-area: Name;
+}
+
+.Label {
+    grid-area: Label;
+    font-size:5em ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.InviteSelector {
+    border: gray;
+    background: #eae4e4;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 30vw;
+}
+
+#LabelInviter{
+ font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vw;
+}
+
+#InputInviter{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1.5vw;
+}
+
+#btnGenerer {
+    width: 13vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1vw;
+    height: 1.5vw;
+    border-radius: 3px;
+}
+
+.NbPersonne {
+    grid-area: NbPersonne;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Ingredient {
+    grid-area: Ingredient;
+    background: gray;
+    margin: 2.5vw;
+    padding: 1vw;
+    border-radius: 20px;
+}
+
+.Recette {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.LabelRecette {
+    font-size: 2em;
+}
+
+.IngredientRecette {
+    height: 2vw;
+    width: 15vw;
+    font-size: 1.5em;
+    border: 2px solid black;
+    margin: 1vw;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    min-width: 7vw;
+}
+
+.LabelRecetteTexte {
+    font-size: 1.5em;
+}

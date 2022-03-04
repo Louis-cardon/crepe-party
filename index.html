@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./index.css">
+    <script async defer src="index.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="Name">
+        <label class="Label">Crepe Party </br>generator</label>
+    </div>
+    <div class="NbPersonne">
+        <div class="InviteSelector">
+            <label id="LabelInviter">Nombre de personnes :</label>
+            <input type="number" id="InputInviter">
+            <button id="btnGenerer" onclick="calculer()">Générer</button>
+        </div>
+    </div>
+    <div class="Ingredient">
+        <label Class="LabelRecette">Ingredient</label>
+        <div class="Recette">
+            <div id="IngredientOeufs" class="IngredientRecette">Oeufs</div>
+            <div id="IngredientLait" class="IngredientRecette">Lait</div>
+            <div id="IngredientFarine" class="IngredientRecette">Farine</div>
+            <div id="IngredientSel" class="IngredientRecette">Sel</div>
+            <div id="IngredientSucre" class="IngredientRecette">Sucre vanillé</div>
+            <div id="IngredientRhum" class="IngredientRecette">Rhum</div>
+        </div>
+        <label Class="LabelRecette">Recette</label><br> <br>
+        <label Class="LabelRecetteTexte">01 Préparation de la pâte
+            Battez au fouet le lait avec les oeufs. Incorporez la farine en la versant en pluie. Ajoutez le sucre vanillé et une pincée de sel. Ajoutez un peu de rhum si vous le souhaitez.
+            <br>02 Finitions et dressage
+            Battez le mélange au batteur 3 minutes. La pâte en sera d'autant plus légère et sans grumeaux.</label>
+    </div>
+</div>
+</body>
+</html>
