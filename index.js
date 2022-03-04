@@ -5,8 +5,15 @@ const sel = 1
 const sucre = 1
 const rhum = 1
 
+document.getElementById("InputInviter").value = 0;
+calculer()
+
 function calculer(){
     let input = document.getElementById("InputInviter").value;
+    if (input< 0){
+        document.getElementById("InputInviter").value = 0;
+        alert("Le nombre de personne ne peut pas être inférieurs à 0");
+    }
     let nbOeufs = oeufs * input
     let nbLait = lait * input
     let nbFarine = farine * input

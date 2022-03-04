@@ -1,0 +1,195 @@
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\" xmlns=\"http://www.w3.org/1999/html\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title></title>\r\n    <link rel=\"stylesheet\" href=\"./index.css\">\r\n    <script async defer src=\"index.js\"></script>\r\n</head>\r\n<body>\r\n<div class=\"container\">\r\n    <div class=\"Name\">\r\n        <label class=\"Label\">Crepe Party </br>generator</label>\r\n    </div>\r\n    <div class=\"NbPersonne\">\r\n        <div class=\"InviteSelector\">\r\n            <label id=\"LabelInviter\">Nombre de personnes :</label>\r\n            <input type=\"number\" id=\"InputInviter\">\r\n            <button id=\"btnGenerer\" onclick=\"calculer()\">Générer</button>\r\n        </div>\r\n    </div>\r\n    <div class=\"Ingredient\">\r\n        <label Class=\"LabelRecette\">Ingredient</label>\r\n        <div class=\"Recette\">\r\n            <div id=\"IngredientOeufs\" class=\"IngredientRecette\">Oeufs</div>\r\n            <div id=\"IngredientLait\" class=\"IngredientRecette\">Lait</div>\r\n            <div id=\"IngredientFarine\" class=\"IngredientRecette\">Farine</div>\r\n            <div id=\"IngredientSel\" class=\"IngredientRecette\">Sel</div>\r\n            <div id=\"IngredientSucre\" class=\"IngredientRecette\">Sucre vanillé</div>\r\n            <div id=\"IngredientRhum\" class=\"IngredientRecette\">Rhum</div>\r\n        </div>\r\n        <label Class=\"LabelRecette\">Recette</label><br> <br>\r\n        <label Class=\"LabelRecetteTexte\">01 Préparation de la pâte\r\n            Battez au fouet le lait avec les oeufs. Incorporez la farine en la versant en pluie. Ajoutez le sucre vanillé et une pincée de sel. Ajoutez un peu de rhum si vous le souhaitez.\r\n            <br>02 Finitions et dressage\r\n            Battez le mélange au batteur 3 minutes. La pâte en sera d'autant plus légère et sans grumeaux.</label>\r\n    </div>\r\n</div>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	(revision 360f5e051d6322c1cb33d521fe60094ba11fc30c)
++++ b/index.html	(date 1646389621695)
+@@ -2,14 +2,14 @@
+ <html lang="en" xmlns="http://www.w3.org/1999/html">
+ <head>
+     <meta charset="UTF-8">
+-    <title></title>
++    <title>Crêpe Partie </title>
+     <link rel="stylesheet" href="./index.css">
+     <script async defer src="index.js"></script>
+ </head>
+ <body>
+ <div class="container">
+     <div class="Name">
+-        <label class="Label">Crepe Party </br>generator</label>
++        <label class="Label">Crêpe Party </br>generator</label>
+     </div>
+     <div class="NbPersonne">
+         <div class="InviteSelector">
+@@ -29,10 +29,10 @@
+             <div id="IngredientRhum" class="IngredientRecette">Rhum</div>
+         </div>
+         <label Class="LabelRecette">Recette</label><br> <br>
+-        <label Class="LabelRecetteTexte">01 Préparation de la pâte
++        <p Class="LabelRecetteTexte">01 Préparation de la pâte
+             Battez au fouet le lait avec les oeufs. Incorporez la farine en la versant en pluie. Ajoutez le sucre vanillé et une pincée de sel. Ajoutez un peu de rhum si vous le souhaitez.
+             <br>02 Finitions et dressage
+-            Battez le mélange au batteur 3 minutes. La pâte en sera d'autant plus légère et sans grumeaux.</label>
++            Battez le mélange au batteur 3 minutes. La pâte en sera d'autant plus légère et sans grumeaux.</p>
+     </div>
+ </div>
+ </body>
+Index: index.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>.container {  display: grid;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-template-rows: 1fr 1fr;\r\n    gap: 0px 0px;\r\n    grid-auto-flow: row;\r\n    grid-template-areas:\r\n    \"Name Ingredient\"\r\n    \"NbPersonne Ingredient\";\r\n    height: 97vh;\r\n}\r\n\r\n.Name {  display: grid;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-template-rows: 1fr 1fr 1fr;\r\n    gap: 0px 0px;\r\n    grid-auto-flow: row;\r\n    grid-template-areas:\r\n    \" . .\"\r\n    \" Label Label \"\r\n    \" . .\";\r\n    grid-area: Name;\r\n}\r\n\r\n.Label {\r\n    grid-area: Label;\r\n    font-size:5em ;\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n}\r\n\r\n.InviteSelector {\r\n    border: gray;\r\n    background: #eae4e4;\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-top: auto;\r\n    margin-bottom: auto;\r\n    width: 30vw;\r\n}\r\n\r\n#LabelInviter{\r\n font-size: 2em;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    margin-top: 1vw;\r\n}\r\n\r\n#InputInviter{\r\n    margin-top: 1vw;\r\n    margin-bottom: 1vw;\r\n    width: 20vw;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    height: 1.5vw;\r\n}\r\n\r\n#btnGenerer {\r\n    width: 13vw;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    margin-bottom: 1vw;\r\n    height: 1.5vw;\r\n    border-radius: 3px;\r\n}\r\n\r\n.NbPersonne {\r\n    grid-area: NbPersonne;\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n}\r\n\r\n.Ingredient {\r\n    grid-area: Ingredient;\r\n    background: gray;\r\n    margin: 2.5vw;\r\n    padding: 1vw;\r\n    border-radius: 20px;\r\n}\r\n\r\n.Recette {\r\n    display: flex;\r\n    flex-direction: row;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n}\r\n\r\n.LabelRecette {\r\n    font-size: 2em;\r\n}\r\n\r\n.IngredientRecette {\r\n    height: 2vw;\r\n    width: 15vw;\r\n    font-size: 1.5em;\r\n    border: 2px solid black;\r\n    margin: 1vw;\r\n    border-radius: 4px;\r\n    display: flex;\r\n    justify-content: center;\r\n    min-width: 7vw;\r\n}\r\n\r\n.LabelRecetteTexte {\r\n    font-size: 1.5em;\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.css b/index.css
+--- a/index.css	(revision 360f5e051d6322c1cb33d521fe60094ba11fc30c)
++++ b/index.css	(date 1646389676432)
+@@ -23,7 +23,7 @@
+ 
+ .Label {
+     grid-area: Label;
+-    font-size:5em ;
++    font-size:4em ;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+@@ -53,6 +53,8 @@
+     margin-left: auto;
+     margin-right: auto;
+     height: 1.5vw;
++    min-height: 20px;
++    text-align: center;
+ }
+ 
+ #btnGenerer {
+@@ -62,6 +64,7 @@
+     margin-bottom: 1vw;
+     height: 1.5vw;
+     border-radius: 3px;
++    min-height: 20px;
+ }
+ 
+ .NbPersonne {
+@@ -91,15 +94,15 @@
+ }
+ 
+ .IngredientRecette {
+-    height: 2vw;
+-    width: 15vw;
++    height: 4vw;
++    min-width: 15vw;
+     font-size: 1.5em;
+     border: 2px solid black;
+     margin: 1vw;
+     border-radius: 4px;
+     display: flex;
+     justify-content: center;
+-    min-width: 7vw;
++    min-height:2vw ;
+ }
+ 
+ .LabelRecetteTexte {
+Index: index.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>const oeufs = 1\r\nconst lait = 0.25\r\nconst farine = 80\r\nconst sel = 1\r\nconst sucre = 1\r\nconst rhum = 1\r\n\r\nfunction calculer(){\r\n    let input = document.getElementById(\"InputInviter\").value;\r\n    let nbOeufs = oeufs * input\r\n    let nbLait = lait * input\r\n    let nbFarine = farine * input\r\n    let nbSel = sel * input\r\n    let nbSucre = sucre * input\r\n    let nbRhum = rhum   * input\r\n    document.getElementById(\"IngredientOeufs\").textContent = nbOeufs + \" Oeuf(s)\"\r\n    document.getElementById(\"IngredientLait\").textContent = nbLait + \"L de lait\"\r\n    document.getElementById(\"IngredientFarine\").textContent = nbFarine + \"g de farine\"\r\n    document.getElementById(\"IngredientSel\").textContent = nbSel + \" pincée de sel\"\r\n    document.getElementById(\"IngredientSucre\").textContent = nbSucre + \" sachet de sucre\"\r\n    document.getElementById(\"IngredientRhum\").textContent = nbRhum + \" cs de rhum\"\r\nreturn input\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.js b/index.js
+--- a/index.js	(revision 360f5e051d6322c1cb33d521fe60094ba11fc30c)
++++ b/index.js	(date 1646389569609)
+@@ -5,8 +5,15 @@
+ const sucre = 1
+ const rhum = 1
+ 
++document.getElementById("InputInviter").value = 0;
++calculer()
++
+ function calculer(){
+     let input = document.getElementById("InputInviter").value;
++    if (input< 0){
++        document.getElementById("InputInviter").value = 0;
++        alert("Le nombre de personne ne peut pas être inférieurs à 0");
++    }
+     let nbOeufs = oeufs * input
+     let nbLait = lait * input
+     let nbFarine = farine * input
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1646388523703)
++++ b/.idea/.gitignore	(date 1646388523703)
+@@ -0,0 +1,5 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1646388523521)
++++ b/.idea/modules.xml	(date 1646388523521)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/crepe-party.iml" filepath="$PROJECT_DIR$/.idea/crepe-party.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1646388523531)
++++ b/.idea/vcs.xml	(date 1646388523531)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/crepe-party.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/crepe-party.iml b/.idea/crepe-party.iml
+new file mode 100644
+--- /dev/null	(date 1646388523506)
++++ b/.idea/crepe-party.iml	(date 1646388523506)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="WEB_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/temp" />
++      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
++      <excludeFolder url="file://$MODULE_DIR$/tmp" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file

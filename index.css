@@ -19,6 +19,7 @@
     " Label Label "
     " . .";
     grid-area: Name;
+    max-height: 55vh;
 }
 
 .Label {
@@ -53,6 +54,8 @@
     margin-left: auto;
     margin-right: auto;
     height: 1.5vw;
+    text-align: center;
+    min-height: 20px;
 }
 
 #btnGenerer {
@@ -62,6 +65,7 @@
     margin-bottom: 1vw;
     height: 1.5vw;
     border-radius: 3px;
+    min-height: 20px;
 }
 
 .NbPersonne {
@@ -91,15 +95,15 @@
 }
 
 .IngredientRecette {
-    height: 2vw;
-    width: 15vw;
+    height: 3vw;
+    min-width: 15vw;
     font-size: 1.5em;
     border: 2px solid black;
     margin: 1vw;
     border-radius: 4px;
     display: flex;
     justify-content: center;
-    min-width: 7vw;
+    min-height: 30px;
 }
 
 .LabelRecetteTexte {
